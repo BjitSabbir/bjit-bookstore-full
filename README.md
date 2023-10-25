@@ -17,7 +17,6 @@
     docker logs bookstore-solo-server
 
 
-# docker compose
 # compose image
     docker compose up
     docker compose down
