@@ -1,8 +1,8 @@
 # bjit-bookstore-full
-#check images 
+# check images 
     docker images
 
-#create image :
+# create image :
     docker build -t sabbir311/my-bookstore-client:latest .
     docker build -t sabbir311/my-bookstore-server:latest .
     docker run -p 27017:27017 -d -it --name bookstore-solo mongo
@@ -12,12 +12,12 @@
     server - docker run -p 8000:8000 -d -it --name bookstore-solo-server sabbir311/my-bookstore-server
 
 
-#see logs : 
+# see logs : 
     docker logs bookstore-solo-client
     docker logs bookstore-solo-server
 
 
------------# docker compose
-#compose image
+# docker compose
+# compose image
     docker compose up
     docker compose down
