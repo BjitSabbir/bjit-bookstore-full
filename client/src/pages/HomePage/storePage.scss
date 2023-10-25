@@ -1,0 +1,76 @@
+@import "./../../colors";
+
+.storePageContainer {
+    position: relative;
+    background-color: $bgSecondary; /* Use the background secondary color from colors.scss */
+
+    .storPageMiddleContainer {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+
+        @media screen and (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sortingOption {
+            display: flex;
+            gap: 20px;
+            padding: 0 20px;
+
+            .sortItem {
+                font-size: medium;
+                font-weight: bold;
+                p {
+                    padding: 0px;
+                    margin: 5px 0;
+                }
+                .dropdown {
+                    padding: 10px;
+                    width: 100%;
+                    background-color: $bgPrimary; /* Use the primary background color from colors.scss */
+                    border: none;
+                    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+                        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+                        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                }
+                .searchHolder {
+                    display: flex;
+                    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+                        rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+                        rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                    .search-input {
+                        padding: 10px;
+                        width: 100%;
+                        background-color: $bgPrimary; /* Use the primary background color from colors.scss */
+                        border: none;
+                        font-weight: bold;
+                        outline: none;
+                    }
+                    button {
+                        padding: 10px;
+                        background-color: $darkBtnPrimary; /* Use the dark button primary color from colors.scss */
+                        color: $darkBtnText; /* Use the dark button text color from colors.scss */
+                        border: none;
+                        font-weight: bold;
+                        cursor: pointer;
+                        &:active {
+                            color: black;
+                            background-color: $bgPrimary; /* Use the primary background color from colors.scss */
+                        }
+                    }
+                }
+            }
+        }
+
+        .bookContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px 5px;
+            min-height: 70vh;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.productCatagoryContainer {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+
+    .genreBook-container {
+        margin: 50px 0;
+
+        .bookTitle {
+        }
+
+        .books {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            overflow-x: scroll;
+            min-height: 300px;
+
+            .book {
+                img {
+                    height: 250px;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

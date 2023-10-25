@@ -1,0 +1,60 @@
+$box-size: 100vw;
+
+.slider-wrapper {
+  width: 100%;
+  max-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  .frame {
+    width: $box-size;
+    // height: calc(100vh - 70px);
+    // background-color: #00e7ff;
+    overflow: hidden;
+
+    .box-container {
+      display: flex;
+      transition: transform 0.2s ease-in-out;
+
+      .box {
+        box-sizing: border-box;
+        // background: #00e7ff;
+        width: $box-size;
+        // height: calc(100vh - 70px);
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease-in-out; // Add a transition for background color
+        img {
+          width: 100%;
+          height: 100%;
+          max-height: calc(100vh - 70px);
+
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .button-2-container {
+    display: flex;
+  }
+
+  .button-2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Use a circle shape */
+    background: #e0e0e0;
+    margin: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; // Add a transition for background color
+  }
+
+  .active {
+    background: #999;
+  }
+}

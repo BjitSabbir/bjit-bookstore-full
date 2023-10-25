@@ -1,0 +1,111 @@
+.outletPage-container {
+  // .header {
+  //   width: 100%;
+  //   display: flex;
+  //   height: 70px;
+  //   align-items: center;
+  //   font-size: large;
+  //   font-weight: bold;
+  //   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  //   .headerLogo {
+  //     flex: 1;
+  //     padding: 0 20px;
+  //     img {
+  //       height: 60px;
+  //       width: 60px;
+  //       object-fit: contain;
+  //     }
+  //   }
+  //   .nav {
+  //     flex: 1;
+  //     display: flex;
+  //     justify-content: flex-end;
+  //     align-items: center;
+  //     gap: 30px;
+  //     padding: 0 30px;
+  //     font-size: 20px;
+  //     display: fz;
+  //   }
+  //   .navLink {
+  //     text-decoration: none;
+  //     color: black;
+  //     display: flex;
+  //     align-items: center;
+  //     text-decoration: none;
+  //     color: #333; /* Change the color as needed */
+  //     font-weight: bold;
+
+  //     &:hover {
+  //       color: #d14031;
+  //       border-bottom: 1px solid #d14031;
+  //     }
+  //   }
+
+  //   .active {
+  //     color: #d14031;
+  //     border-bottom: 1px solid #d14031;
+  //     background-color: #000000;
+  //   }
+  //   .userImgClircle {
+  //     height: 40px;
+  //     width: 40px;
+  //     border-radius: 50%;
+  //     object-fit: cover;
+  //   }
+
+  //   @media screen and (max-width: 768px) {
+  //     .header {
+  //       flex-direction: column;
+  //       height: 100px;
+  //       .headerLogo {
+  //         padding: 0;
+  //         img {
+  //           height: 100px;
+  //           width: 100px;
+  //         }
+  //       }
+  //       .nav {
+  //         flex: 1;
+  //         justify-content: space-evenly;
+  //         padding: 0;
+  //         font-size: 15px;
+  //       }
+  //     }
+  //   }
+  // }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background-color: #282828;
+    color: white;
+
+    .footerTop {
+      flex: 1;
+      .footerLink {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .footerBottom {
+      height: 70px;
+      background-color: #000000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 0 10px;
+
+      font-family: "Courier New", Courier, monospace;
+
+      .fa-chevron-up {
+        background-color: #d14031;
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

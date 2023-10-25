@@ -1,0 +1,50 @@
+.selectedUserContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .selectedUserContainer__body {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+
+        .toggle_modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-size: 14px;
+                color: #333;
+            }
+            //for text inputs
+            input[type="text"] {
+                border: none;
+                border-bottom: 1px solid black;
+                outline: none;
+                padding: 5px;
+                font-size: 16px;
+            }
+        }
+        button {
+            padding: 10px;
+        }
+    }
+}

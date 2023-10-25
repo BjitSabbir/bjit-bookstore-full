@@ -1,0 +1,62 @@
+.adminTransectionPage {
+  padding: 20px;
+  //   background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  font-family: "Roboto", sans-serif;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  // Style for table headers
+  th {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+
+  // Style for table data rows
+  tr {
+    &:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+
+  // Style for table cells
+  td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  // Style for the table header of the first column
+  th:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  // Style for the table header of the last column
+  th:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  // Style for the table data of the first column
+  td:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  // Style for the table data of the last column
+  td:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}

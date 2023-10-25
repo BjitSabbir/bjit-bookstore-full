@@ -1,0 +1,35 @@
+.navLink {
+  text-decoration: none;
+  margin: 10px;
+  font-family: "Roboto, sans-serif ";
+  color: #30223b;
+
+  .span-container {
+    font-size: 20px;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .navLink:hover {
+    color: #d14031;
+    border-bottom: 1px solid #d14031;
+  }
+
+  .navLink-active {
+    color: #d14031;
+    border-bottom: 1px solid #d14031;
+  }
+
+  @media (max-width: 768px) {
+    .navLink {
+      font-size: 16px;
+      margin: 5px;
+    }
+
+    .navLink .span-container {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "./../../colors.scss";
+.transectionCard {
+    background-color: $bgPrimary;
+    text-align: center;
+    padding: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+
+    .transectionTable {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .transectionTable th,
+    .transectionTable td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    .transectionTable th {
+        background-color: $yellowBgSecondary;
+    }
+
+    .transectionCard {
+        margin: 10px;
+    }
+}

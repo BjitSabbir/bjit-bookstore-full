@@ -1,0 +1,114 @@
+/* userProfile.scss */
+
+/* Import your color variables from colors.scss */
+@import "./../../colors";
+
+.user-profile-container {
+    width: 100%;
+    min-height: 70vh;
+    background-color: $bgSecondary;
+
+    font-family: "roboto";
+    position: relative;
+
+    .user-profile {
+        width: 100%;
+        max-width: 1200px;
+        border-radius: 5px;
+        margin: auto;
+        display: flex;
+        padding: 20px 0;
+        gap: 20px;
+
+        .user-details {
+            min-height: 60vh;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: white;
+            align-items: center;
+            img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 50%;
+                padding: 10px 0;
+            }
+
+            .user-title {
+                font-size: 24px;
+                color: $darkBtnPrimary;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            .input-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            input[type="text"] {
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                color: $darkBtnPrimary;
+                margin-top: 5px;
+            }
+
+            .inputEdit {
+                border: 1px solid $bluePrimary;
+            }
+        }
+
+        .user-history {
+            flex: 1;
+            padding: 0 20px;
+            min-height: 70vh;
+            background-color: white;
+
+            .profile-UserHistory {
+                .profile-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 20px 0;
+                    caption {
+                        font-size: 24px;
+                        color: $darkBtnPrimary;
+                        margin-bottom: 20px;
+                    }
+                    th,
+                    td {
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                        text-align: left;
+                    }
+                    th {
+                        background-color: #007bff;
+                        color: white;
+                    }
+                }
+
+                .profile-items-holder {
+                    .profile-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid #ccc;
+
+                        p {
+                            font-size: 18px;
+                            color: $darkBtnPrimary;
+                            span {
+                                font-size: 14px;
+                                color: $text-gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

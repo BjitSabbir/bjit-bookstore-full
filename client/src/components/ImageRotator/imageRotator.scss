@@ -1,0 +1,19 @@
+.container {
+    overflow: hidden;
+}
+
+.sliding-background {
+    background: url("https://chapterone.qodeinteractive.com/wp-content/uploads/2019/09/landing-image-ss.png")
+        repeat-x;
+    height: 100vh;
+    width: 100vw;
+    animation: slide 60s linear infinite;
+    background-size: 1920px 100vh;
+    background-color: blue;
+}
+
+@keyframes slide {
+    to {
+        background-position: -1920px 0;
+    }
+}

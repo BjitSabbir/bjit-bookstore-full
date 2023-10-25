@@ -1,0 +1,158 @@
+@import "./../../colors";
+
+.wallet-container {
+    min-height: 70vh;
+    display: flex;
+    background-color: $bgSecondary; /* Use the variable for background color */
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+
+    .wallet-img {
+        animation: bounce 1.5s ease-in-out infinite;
+        img {
+            object-fit: contain;
+            height: 200px;
+        }
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .wallet-balance {
+        width: 100vw;
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 36px;
+            margin-top: 0px;
+            color: $coin-bronze;
+
+            i {
+                font-size: 24px;
+                padding: 0 5px;
+            }
+        }
+
+        .wallet-buttons {
+            button {
+                padding: 10px 20px;
+                margin: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+
+                &.topup-button {
+                    background-color: $bluePrimary; /* Use the variable for button color */
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #0069d9;
+                    }
+                }
+
+                &.view-transaction-button {
+                    background-color: $inputText; /* Use the variable for button color */
+                    color: $inputPrimary; /* Use the variable for text color */
+
+                    &:hover {
+                        background-color: #aaa;
+                    }
+                }
+            }
+        }
+    }
+
+    .wallet-transections {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        max-height: 100%;
+        overflow: auto;
+        width: 500px;
+        transition: all 0.3s ease-in-out;
+        background-color: $bgPrimary; /* Use the variable for background color */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        .transectionContauner {
+            .transectionTop {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                border-bottom: 1px solid $text-gray;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $text-gray;
+                }
+            }
+
+            .filtering {
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                border-bottom: 1px solid #ccc;
+                gap: 10px;
+
+                input {
+                    width: 100%;
+                    padding: 5px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    outline: none;
+                    color: #333;
+                }
+                i {
+                    margin-right: 10px;
+                    color: #333;
+                    cursor: pointer;
+                }
+            }
+            .transectionList {
+                padding: 10px;
+                .not-found {
+                    text-align: center;
+                    padding: 20px;
+                    font-size: 18px;
+                    color: $text-gray;
+                }
+            }
+        }
+    }
+    .transleteLeft {
+        transform: translateX(-500px);
+    }
+    .hideContent {
+        display: none;
+    }
+}

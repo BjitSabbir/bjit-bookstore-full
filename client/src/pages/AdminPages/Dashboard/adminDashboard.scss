@@ -1,0 +1,145 @@
+/* Assuming the breakpoint for mobile devices is 768px */
+.admin-dashboard {
+  .admin-dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 20px;
+    .admin-dashboard-top {
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      color: white;
+      font-size: large;
+      font-weight: bold;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+      }
+
+      .admin-dashboard-top-card {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        .icon {
+          padding: 10px;
+          border-radius: 50%;
+          color: white;
+        }
+
+        p {
+          margin: 0;
+        }
+        h1 {
+          margin: 0;
+        }
+
+        svg {
+          margin-right: 10px; /* Add spacing between the icon and text */
+        }
+
+        @media (max-width: 768px) {
+          font-size: 16px; /* Reduce font size on mobile */
+          svg {
+            width: 30px; /* Reduce icon size on mobile */
+            height: 30px;
+          }
+        }
+      }
+      .admin-dashboard-top-card:nth-child(1) {
+        background-color: #389af0;
+
+        .icon {
+          background-color: #2d7bc0;
+        }
+      }
+      .admin-dashboard-top-card:nth-child(2) {
+        background-color: #e67d21;
+
+        .icon {
+          background-color: #b8641a;
+        }
+      }
+      .admin-dashboard-top-card:nth-child(3) {
+        background-color: #8e44ad;
+
+        .icon {
+          background-color: #72368a;
+        }
+      }
+      .admin-dashboard-top-card:nth-child(4) {
+        background-color: #198754;
+
+        .icon {
+          background-color: #146c43;
+        }
+      }
+    }
+    .admin-dashboard-sells {
+      padding: 0 20px;
+      min-height: 300px;
+    }
+
+    .admin-details-cart {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 20px;
+      min-height: 300px;
+      gap: 10px;
+
+      .admin-details-cart-container {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+          rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+      }
+    }
+
+    .admin-top-details {
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      .top-commented-books {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
+
+        h1 {
+          margin: 0;
+          font-size: 24px;
+        }
+        .top-active-users {
+          display: flex;
+          gap: 10px;
+          img {
+            height: 70px;
+            object-fit: contain;
+          }
+          h2 {
+            margin: 0;
+            font-size: medium;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

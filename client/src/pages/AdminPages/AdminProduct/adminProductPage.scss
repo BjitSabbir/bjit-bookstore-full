@@ -1,0 +1,160 @@
+.admin-product-container {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    padding: 20px;
+    min-height: 100vh;
+
+    .formSearchFilter {
+        display: flex;
+        gap: 10px;
+
+        .holder {
+            input {
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            select {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+        .AddNewBook {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+
+    .table-container {
+        width: 100%;
+        overflow: auto;
+        font-size: 14px;
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr {
+            cursor: pointer;
+            &:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+        }
+
+        td {
+            height: 100px;
+            border: 1px solid #ddd;
+            text-align: center;
+            input[type="text"],
+            input[type="number"],
+            textarea {
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin: 5px 0;
+                height: 100px;
+                max-width: 100%;
+            }
+        }
+
+        .actionHolder {
+            text-align: center;
+
+            .save {
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #218838;
+                }
+            }
+
+            .cancleBtn {
+                background-color: #dc3545;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #c82333;
+                }
+            }
+
+            .edit {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+
+            .delete {
+                background-color: #dc3545;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #c82333;
+                }
+            }
+
+            .view {
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-product-container {
+        padding: 10px;
+
+        .table-container {
+            table {
+                font-size: 12px;
+            }
+
+            td {
+                input[type="text"],
+                input[type="number"],
+                textarea {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

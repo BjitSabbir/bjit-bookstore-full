@@ -1,0 +1,197 @@
+// Import your colors.scss file
+@import "./../../colors";
+
+.bookDetailsContainer {
+    min-height: 100vh;
+    padding-bottom: 30px;
+    position: relative;
+    background-color: $bgSecondary;
+
+    .bookDetails {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+
+        .bookImage {
+            flex: 0.5;
+            display: flex;
+            justify-content: center;
+
+            img {
+                display: flex;
+                padding: 0px 20px;
+                max-width: 400px;
+                max-height: 400px;
+                height: 100%;
+                max-height: 400px;
+                object-fit: contain;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                padding: 20px;
+            }
+        }
+
+        .bookDetailsDescription {
+            padding: 0 20px;
+            flex: 1;
+            background-color: $bgPrimary;
+
+            .title {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 16px;
+
+                text-align: justify;
+                margin: 5px 0;
+                font-family: "roboto";
+                color: $darkSecondary;
+            }
+
+            .price-holder {
+                font-size: 24px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                width: 200px;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+
+                .priceContent {
+                    display: flex;
+                    gap: 10px;
+
+                    .regular-price {
+                        color: #929292;
+                        text-decoration: line-through;
+                    }
+
+                    .offer-price {
+                        // color: #de2454;
+                    }
+                }
+            }
+
+            .rating-holder {
+                color: gold;
+            }
+
+            .commentsHolder {
+                h1 {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+
+                form {
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    textarea {
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        resize: none;
+                        min-height: 100px;
+                    }
+
+                    .ratingSelect {
+                        background-color: $bgPrimary; // Use the SCSS variable
+                        border: 1px solid #ccc;
+                        padding: 10px 20px;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        max-width: 300px;
+                    }
+
+                    .submit-btn {
+                        background-color: $bluePrimary; // Use the SCSS variable
+                        color: $bgPrimary; // Use the SCSS variable
+                        border: none;
+                        padding: 10px 20px;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        max-width: 300px;
+
+                        &:hover {
+                            background-color: #0056b3;
+                        }
+                    }
+                }
+
+                hr {
+                    border: 0;
+                    border-top: 1px solid #ccc;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .review {
+                    position: relative;
+                    border-radius: 5px;
+
+                    i {
+                        color: $bluePrimary; // Use the SCSS variable
+                        margin-right: 5px;
+                    }
+
+                    .name {
+                        font-weight: bold;
+                        padding: 5px 10px;
+                    }
+
+                    .comment {
+                        background-color: $bgSecondary; // Use the SCSS variable
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
+
+                    .rating {
+                        color: gold;
+                    }
+
+                    .date {
+                        color: #929292;
+                        margin-bottom: 10px;
+                        text-align: right;
+                    }
+
+                    .actions {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        display: flex;
+                        gap: 10px;
+                        padding: 10px;
+                        background-color: $bgSecondary; // Use the SCSS variable
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        i {
+                            color: #929292;
+                            &:hover {
+                                color: $bluePrimary; // Use the SCSS variable
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+}

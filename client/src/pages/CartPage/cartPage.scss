@@ -1,0 +1,183 @@
+@import "./../../colors.scss"; // Import your color variables
+
+.cart-page {
+    background-color: $bgSecondary;
+    min-height: 70vh;
+    padding: 10px 0;
+    position: relative;
+
+    .cart-container {
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+        margin: auto;
+        gap: 20px;
+        background-color: $bgPrimary;
+
+        .cart-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: $darkBtnPrimary;
+            margin: 10px;
+        }
+
+        .cart-subtitle {
+            font-size: 18px;
+            color: $text-gray;
+            margin: 10px;
+            margin-bottom: 30px;
+        }
+
+        .action-holder {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .book-image {
+            min-width: 180px;
+            height: 200px;
+            object-fit: contain;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            padding: 10px 0;
+            margin-right: 20px;
+        }
+
+        .cart-item {
+            margin-bottom: 10px;
+            display: flex;
+            gap: 5px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+
+            .book-info {
+                .book-title {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: $darkBtnPrimary;
+                }
+
+                .book-price {
+                    font-size: 18px;
+                    color: $darkBtnPrimary;
+                    margin: 5px 0;
+                }
+
+                .buttons-container {
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 10px;
+
+                    .increment-button {
+                        background-color: $darkBtnPrimary;
+                        height: 40px;
+                        width: 40px;
+                        border: none;
+                        color: $bgPrimary;
+                        cursor: pointer;
+
+                        &:active {
+                            background-color: $darkSecondary;
+                        }
+                    }
+
+                    .book-quantity {
+                        font-size: 25px;
+                        align-items: center;
+                        font-family: system-ui, -apple-system,
+                            BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+                            sans-serif;
+                    }
+
+                    .decrement-button {
+                        background-color: $darkBtnPrimary;
+                        height: 40px;
+                        width: 40px;
+                        border: none;
+                        color: $bgPrimary;
+                        cursor: pointer;
+
+                        &:active {
+                            background-color: $darkSecondary;
+                        }
+                    }
+
+                    .delete-button {
+                        background-color: $redPrimary;
+                        height: 40px;
+                        width: 40px;
+                        border: none;
+                        color: $bgPrimary;
+                        cursor: pointer;
+
+                        &:active {
+                            background-color: $redSecondary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .total-price-holder {
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+
+            .dataHolder {
+                flex: 1;
+                border: 1px solid $text-gray;
+                padding: 10px;
+                min-width: 200px;
+
+                p {
+                    margin: 0;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                        "Open Sans", "Helvetica Neue", sans-serif;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .empty-cart {
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        color: $text-gray;
+        min-height: 70vh;
+    }
+
+    @media screen and (max-width: 768px) {
+        .cart-container {
+            max-width: 100%;
+            padding: 10px;
+            flex-direction: column;
+        }
+
+        .book-image {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .book-title {
+            margin: 5px 0;
+        }
+
+        .book-price {
+            margin: 5px 0;
+        }
+
+        .total-price-holder {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+// Define the styling for filled stars
+.filled-star {
+    font-size: 24px;
+    color: gold;
+    margin-right: 2px;
+}
+
+// Define the styling for unfilled stars
+.unfilled-star {
+    font-size: 24px;
+    color: lightgray;
+    margin-right: 2px;
+}
+
+// Define a class for the stars container
+.stars-container {
+    display: inline-block;
+}

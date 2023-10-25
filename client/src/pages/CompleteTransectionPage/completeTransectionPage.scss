@@ -1,0 +1,68 @@
+@import "./../../colors.scss";
+.completeTransectionContainer {
+  min-height: 80vh;
+  background-color: $bgSecondary;
+
+  .completeTransectionBody {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding-bottom: 50px;
+
+    .completeTransectionBodyLeft {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 500px;
+        object-fit: contain;
+      }
+
+      h1 {
+        margin: 0px;
+        padding: 0px;
+      }
+      p {
+        margin: 0px;
+      }
+    }
+    .completeTransectionBodyRight {
+      flex: 1;
+      .completeTransectionMemo {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        height: 100%;
+        background-color: white;
+
+        font-family: "Roboto", sans-serif;
+
+        h1 {
+          background-color: black;
+          color: white;
+          padding: 10px;
+          text-align: center;
+        }
+        p {
+          padding: 0 10px;
+        }
+        h2 {
+          padding: 0 10px;
+          border-top: 1px dotted rgb(185, 185, 185);
+          padding-top: 10px;
+        }
+        .completeTransectionBooks {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

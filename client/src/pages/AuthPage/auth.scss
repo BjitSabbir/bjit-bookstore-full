@@ -1,0 +1,248 @@
+@import "./../../colors";
+
+.loginPageContainer {
+    height: 100vh;
+    background: url("https://chapterone.qodeinteractive.com/wp-content/uploads/2019/09/landing-image-ss.png")
+        repeat-x;
+    height: 100vh;
+    animation: slide 300s linear infinite;
+    background-size: 1920px 100vh;
+    background-color: blue;
+    position: relative;
+
+    @keyframes slide {
+        to {
+            background-position: -1920px 0;
+        }
+    }
+
+    .overlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        .loginHolder {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+                rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+            h1 {
+                font-size: 30px;
+                font-weight: bold;
+                color: $bluePrimary; /* Use the bluePrimary color */
+                text-align: left;
+            }
+
+            .input-container {
+                position: relative;
+                width: 100%;
+                max-width: 250px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    color: $bluePrimary; /* Use the bluePrimary color */
+                }
+
+                .input {
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid #ccc;
+                    padding: 10px 5px;
+
+                    &:focus {
+                        border-bottom: 1px solid $bluePrimary; /* Use the bluePrimary color */
+                    }
+                }
+
+                i {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    cursor: pointer;
+                }
+
+                .error {
+                    padding: 5px 0px;
+                    color: $redPrimary; /* Use the redPrimary color */
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        button {
+            padding: 10px;
+            width: 250px;
+            background-color: $bluePrimary; /* Use the bluePrimary color */
+            color: $bgPrimary; /* Use the bgPrimary color */
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $blueBgSecondary; /* Use the blueBgSecondary color */
+            }
+
+            &:active {
+                background-color: $blueBgSecondary; /* Use the blueBgSecondary color */
+            }
+        }
+        .login-option {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            span {
+                color: $bluePrimary; /* Use the bluePrimary color */
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .auth_page_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        .auth_page_content {
+            background-color: white;
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            max-height: 400px;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .auth_page_navigation {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: $bluePrimary;
+                    text-align: left;
+                    margin: 0;
+                }
+            }
+            .auth_page_body {
+                margin-top: 10px;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                overflow: hidden;
+
+                .left {
+                    height: 100%;
+                    min-width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                }
+
+                .right {
+                    height: 100%;
+                    min-width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+
+                    span {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: black;
+                        font-family: "Roboto", sans-serif;
+                        cursor: pointer;
+                    }
+                }
+
+                img {
+                    width: 250px;
+                    object-fit: contain;
+                }
+
+                .inputHolder {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: $bluePrimary;
+                        margin-top: 0;
+                        max-width: 250px;
+                    }
+                    input {
+                        width: 100%;
+                        max-width: 250px;
+                        height: 30px;
+                        border: none;
+                        outline: none;
+                        border-bottom: 1px solid #ccc;
+                        padding: 5px;
+                        margin-bottom: 10px;
+                        &:focus {
+                            border-bottom: 1px solid $bluePrimary; /* Use the bluePrimary color */
+                        }
+                    }
+                }
+
+                .transformLeftToRight {
+                    animation: transformLeftToRight 0.5s ease-in-out forwards;
+                }
+
+                // Animation
+                @keyframes transformLeftToRight {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-100%);
+                    }
+                }
+
+                .transformRightToLeft {
+                    animation: transformRightToLeft 0.5s ease-in-out forwards;
+                }
+
+                // Animation
+                @keyframes transformRightToLeft {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+}
