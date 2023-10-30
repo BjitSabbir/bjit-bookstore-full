@@ -229,7 +229,7 @@ class AuthControllers {
             await user.save();
 
             const resetUrl = path.join(
-                "http://localhost:5173",
+                "http://15.237.128.241:5173",
                 "auth/resetPassword",
                 resetToken,
                 user._id.toString()

@@ -16,7 +16,7 @@ export const getAllUsersTransactions = async (token) => {
 }
 
 export const updateTransaction = async (id, status, token) => {
-    const UPDATE_TRANSECTION_BY_ID = 'http://localhost:8000/admin/update/transaction/';
+    const UPDATE_TRANSECTION_BY_ID = 'http://15.237.128.241:8000/admin/update/transaction/';
     const url = UPDATE_TRANSECTION_BY_ID + id;
 
     try {
@@ -39,7 +39,7 @@ export const updateTransaction = async (id, status, token) => {
 export const getTop3Discounts = async () => {
 
     try {
-        const response = await axios.get("http://localhost:8000/admin/discount/getLatestActiveDiscount");
+        const response = await axios.get("http://15.237.128.241:8000/admin/discount/getLatestActiveDiscount");
         return response.data;
     } catch (error) {
         console.error(error);

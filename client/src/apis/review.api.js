@@ -91,7 +91,7 @@ export const deleteReview = async (token, bookId) => {
 //         redirect: 'follow'
 //     };
 
-//     const response = await fetch("http://localhost:8000/reviews/addReview", requestOptions)
+//     const response = await fetch("http://15.237.128.241:8000/reviews/addReview", requestOptions)
 //         .then(response => response.json())
 
 //     console.log(response);
@@ -116,7 +116,7 @@ export const deleteReview = async (token, bookId) => {
 //         redirect: 'follow'
 //     };
 
-//     const response = await fetch("http://localhost:8000/reviews/deleteReview", requestOptions)
+//     const response = await fetch("http://15.237.128.241:8000/reviews/deleteReview", requestOptions)
 //         .then(response => response.json())
 
 //     return response;

@@ -101,7 +101,7 @@ export const requestOtpApi = async ({ email }) => {
 
 export const requestForgotPassword = async (email) => {
     try {
-        const response = await axios.post("http://localhost:8000/auth/requestPasswordReset", {
+        const response = await axios.post("http://15.237.128.241:8000/auth/requestPasswordReset", {
             email: email,
         });
 
@@ -123,7 +123,7 @@ export const requestForgotPassword = async (email) => {
 
 export const updatePassword = async (resetToken, userId, password) => {
     try {
-        const response = await axios.post("http://localhost:8000/auth/resetPassword", {
+        const response = await axios.post("http://15.237.128.241:8000/auth/resetPassword", {
             resetToken,
             userId,
             password,
@@ -148,7 +148,7 @@ export const updatePassword = async (resetToken, userId, password) => {
 
 export const checkPasswordResetToken = async (resetToken, userId) => {
     try {
-        const response = await axios.post("http://localhost:8000/auth/checkPasswordResetToken", {
+        const response = await axios.post("http://15.237.128.241:8000/auth/checkPasswordResetToken", {
             resetToken: resetToken,
             userId: userId,
         });

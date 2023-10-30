@@ -114,7 +114,7 @@ class FileControllers {
         const filename = req.params.fileName;
         try {
             // const filePath = `./uploads/${filename}`;
-            const serverPath = `http://localhost:8000/uploads/${filename}`;
+            const serverPath = `http://15.237.128.241:8000/uploads/${filename}`;
             res.status(OK).json({ link: serverPath });
         } catch (error) {
             res.status(INTERNAL_SERVER_ERROR).send(errorMessage("Error getting file link"));

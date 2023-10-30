@@ -28,7 +28,7 @@ export const addBook = async (token, data) => {
         );
 
         const response = await axios.post(
-            "http://localhost:8000/books/add",
+            "http://15.237.128.241:8000/books/add",
             {
                 title,
                 authors,
@@ -60,7 +60,7 @@ export const updateBook = async (token, id, data) => {
 
 
         const response = await axios.put(
-            `http://localhost:8000/books/edit/${id}`,
+            `http://15.237.128.241:8000/books/edit/${id}`,
             {
                 ...data,
             },
@@ -84,7 +84,7 @@ export const updateBook = async (token, id, data) => {
 export const removeBook = async (token, id) => {
     try {
         const response = await axios.delete(
-            `http://localhost:8000/books/delete/${id}`,
+            `http://15.237.128.241:8000/books/delete/${id}`,
             {
                 headers: {
                     'x-auth-token': token,

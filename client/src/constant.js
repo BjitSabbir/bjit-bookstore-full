@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://15.237.128.241:8000";
 
 //books
 const GET_ALL_BOOKS = `${BASE_URL}/books/getAllBooks`;

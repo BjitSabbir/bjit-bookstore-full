@@ -24,7 +24,7 @@ export const checkoutCart = async (token) => {
         let config = {
             method: "post",
             maxBodyLength: Infinity,
-            url: "http://localhost:8000/user/transactions",
+            url: "http://15.237.128.241:8000/user/transactions",
             headers: {
                 "x-auth-token": token,
             },
